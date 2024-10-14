@@ -2,6 +2,10 @@
 
 This project is a Laravel-based application that demonstrates the use of polymorphic relationships. It includes various resources such as posts, comments, tags, and videos, and provides a RESTful API for managing these resources.
 
+more information at -
+
+https://medium.com/@murilolivorato/mastering-polymorphic-relationships-in-laravel-a-comprehensive-guide-ff3bc3ef2b64
+
 ## PREREQUISITES
 
 Before you begin, ensure you have met the following requirements:
@@ -15,7 +19,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/laravel-polymorphs.git
+    git clone https://github.com/murilolivorato/laravel-polymorphs-project.git
     cd laravel-polymorphs
     ```
 
