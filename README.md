@@ -1,10 +1,94 @@
-# LARAVEL POLYMORPHS PROJECT
+# Mastering Polymorphic Relationships in Laravel
 
-This project is a Laravel-based application that demonstrates the use of polymorphic relationships. It includes various resources such as posts, comments, tags, and videos, and provides a RESTful API for managing these resources.
+A comprehensive guide and implementation of polymorphic relationships in Laravel, demonstrating both one-to-many and many-to-many polymorphic relationships through a practical example.
+
+<p align="center">
+<br><br>
+<img src="https://miro.medium.com/v2/resize:fit:700/1*B9DqS8UffgiQ9HjG5m_NYg.png" alt="Introduction" /><br>
+</p>
+
+<p align="center">
+<br><br>
+<img src="https://miro.medium.com/v2/resize:fit:700/1*r9leqAZTHuYZJ1NTMTmZYA.png" alt="Introduction" /><br>
+</p>
+
+
+
 
 more information at -
-
 https://medium.com/@murilolivorato/mastering-polymorphic-relationships-in-laravel-a-comprehensive-guide-ff3bc3ef2b64
+
+## Overview
+
+This project demonstrates how to implement polymorphic relationships in Laravel using a blog-like application where:
+- Posts and Videos can have Comments (one-to-many polymorphic)
+- Posts and Videos can have Tags (many-to-many polymorphic)
+- A single relationship structure can be reused across different models
+
+## Features
+
+- One-to-many polymorphic relationships (Comments)
+- Many-to-many polymorphic relationships (Tags)
+- RESTful API implementation
+- Factory and Seeder setup
+- Postman collections for API testing
+- Comprehensive model relationships
+
+## Prerequisites
+
+- PHP 8.1 or higher
+- Composer
+- Laravel 10.x
+- MySQL or another database system
+- Postman (for API testing)
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone <your-repository-url>
+cd polymorphic-example
+```
+
+2. Install dependencies:
+```bash
+composer install
+```
+
+3. Configure your environment:
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+4. Run migrations and seed the database:
+```bash
+php artisan migrate
+php artisan db:seed
+```
+
+## Database Structure
+
+### Tables
+- `posts` - Stores blog posts
+- `videos` - Stores video content
+- `comments` - Stores comments (polymorphic)
+- `tags` - Stores tags
+- `taggables` - Polymorphic pivot table for tags
+
+### Key Relationships
+
+1. **One-to-Many Polymorphic (Comments)**
+   - Posts can have many comments
+   - Videos can have many comments
+   - Comments belong to either posts or videos
+
+2. **Many-to-Many Polymorphic (Tags)**
+   - Posts can have many tags
+   - Videos can have many tags
+   - Tags can belong to many posts and videos
+
+
 
 ## PREREQUISITES
 
@@ -506,3 +590,19 @@ php artisan test
   ]
 }
 ```
+## 👥 Author
+
+For questions, suggestions, or collaboration:
+- **Author**: Murilo Livorato
+- **GitHub**: [murilolivorato](https://github.com/murilolivorato)
+- **linkedIn**: https://www.linkedin.com/in/murilo-livorato-80985a4a/
+
+<div align="center">
+  <h3>⭐ Star This Repository ⭐</h3>
+  <p>Your support helps us improve and maintain this project!</p>
+  <a href="https://github.com/murilolivorato/laravel-polymorphs-project/stargazers">
+    <img src="https://img.shields.io/github/stars/murilolivorato/laravel-polymorphs-project?style=social" alt="GitHub Stars">
+  </a>
+</div>
+
+
